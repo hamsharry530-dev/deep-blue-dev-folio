@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 animate-fade-in">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-up">
-            Haris Khqn
+            Haris Khan
           </h1>
           <h2 className="text-2xl md:text-3xl text-white/90 mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             AI Engineer & Machine Learning Specialist
