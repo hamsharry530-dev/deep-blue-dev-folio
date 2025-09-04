@@ -33,35 +33,50 @@ const projects = [
 ];
 
 const Projects = () => {
+  const handleGitHub = (url: string) => {
+    window.open(url, '_blank');
+  };
+
+  const handleDemo = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   return (
-    <section id="projects" className="py-20 bg-gradient-subtle">
+    <section id="projects" className="py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Featured Projects
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Showcasing innovative AI solutions that solve real-world problems
-          </p>
+        <div className="text-center mb-16">
+          <div className="animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Featured Projects
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Showcasing innovative AI solutions that solve real-world problems
+            </p>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="hover-lift animate-slide-up bg-card border-border"
+              className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/20 animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <p className="font-semibold">View Project</p>
+                  </div>
+                </div>
               </div>
               
               <CardHeader>
-                <CardTitle className="text-xl font-bold text-card-foreground">
+                <CardTitle className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
@@ -74,7 +89,7 @@ const Projects = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-3 py-1 bg-primary-muted text-primary-dark text-sm rounded-full"
+                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20 hover:bg-primary/20 transition-colors duration-200"
                     >
                       {tech}
                     </span>
@@ -82,11 +97,21 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex space-x-3">
-                  <Button variant="outline" size="sm" className="flex-1">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="flex-1 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    onClick={() => handleGitHub(project.github)}
+                  >
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
-                  <Button variant="default" size="sm" className="flex-1">
+                  <Button 
+                    variant="default" 
+                    size="sm" 
+                    className="flex-1 bg-primary hover:bg-primary-dark transition-all duration-300"
+                    onClick={() => handleDemo(project.demo)}
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Demo
                   </Button>
