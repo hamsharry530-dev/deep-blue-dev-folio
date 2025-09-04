@@ -41,7 +41,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I'm an AI Engineer with 5+ years of experience building intelligent systems 
+                I'm an AI Engineer with  enough experience building intelligent systems 
                 that solve complex real-world problems. My expertise spans machine learning, 
                 deep learning, and natural language processing.
               </p>
