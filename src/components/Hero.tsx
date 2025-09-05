@@ -8,11 +8,11 @@ const Hero = () => {
   };
 
   const openGitHub = () => {
-    window.open('https://github.com', '_blank');
+    window.open('https://github.com/Harisk-han', '_blank');
   };
 
   const openLinkedIn = () => {
-    window.open('https://linkedin.com', '_blank');
+    window.open('www.linkedin.com/in/hariskhan164', '_blank');
   };
 
   const scrollToContact = () => {
@@ -42,9 +42,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           <div className="animate-fade-in">
             <div className="mb-4">
-              <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm font-medium">
-                Welcome to my portfolio
-              </span>
+             
             </div>
             <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-none tracking-tight">
               Haris Khan
