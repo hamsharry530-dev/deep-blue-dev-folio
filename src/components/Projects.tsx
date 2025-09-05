@@ -42,8 +42,9 @@ const Projects = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
+    <section className="py-24 relative">
+      <div className="absolute inset-0 glass-effect"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <div className="animate-fade-in">
             <div className="mb-4">
@@ -64,7 +65,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl hover:shadow-primary/5 transition-all duration-700 hover:-translate-y-3 bg-card border-border/50 hover:border-primary/30 animate-slide-up overflow-hidden"
+              className="group hover:shadow-2xl hover:shadow-primary/5 transition-all duration-700 hover:-translate-y-3 glass-card animate-slide-up overflow-hidden"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative overflow-hidden">

@@ -26,8 +26,9 @@ const skills = [
 
 const About = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
-      <div className="container mx-auto px-6">
+    <section className="py-24 relative">
+      <div className="absolute inset-0 glass-effect opacity-80"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="animate-fade-in">
@@ -47,7 +48,7 @@ const About = () => {
           
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-slide-up space-y-8">
-              <div className="p-8 bg-card rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
+              <div className="p-8 glass-card rounded-xl hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I'm an AI Engineer with extensive experience building intelligent systems 
                   that solve complex real-world problems. My expertise spans machine learning, 
@@ -55,7 +56,7 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="p-8 bg-card rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
+              <div className="p-8 glass-card rounded-xl hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I specialize in taking AI research from concept to production, with a focus 
                   on scalable architectures and efficient model optimization. My work has 
@@ -63,7 +64,7 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="p-8 bg-card rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
+              <div className="p-8 glass-card rounded-xl hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   When I'm not coding, I enjoy contributing to open-source projects, 
                   writing technical articles, and exploring the latest developments in AI research.
@@ -75,7 +76,7 @@ const About = () => {
               {skills.map((skill, index) => (
                 <Card 
                   key={index} 
-                  className="group hover:shadow-xl hover:shadow-primary/5 transition-all duration-700 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/40"
+                  className="group hover:shadow-xl hover:shadow-primary/5 transition-all duration-700 hover:-translate-y-2 glass-card"
                 >
                   <CardContent className="p-8 text-center">
                     <skill.icon className="w-14 h-14 text-primary mx-auto mb-6 group-hover:scale-110 group-hover:text-accent transition-all duration-500" />
