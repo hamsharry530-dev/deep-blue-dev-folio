@@ -52,9 +52,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative">
-      <div className="absolute inset-0 glass-effect opacity-90"></div>
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="contact" className="py-24 bg-gradient-to-b from-background to-primary/5">
+      <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="animate-fade-in">
@@ -74,7 +73,7 @@ const Contact = () => {
           
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <Card className="animate-slide-up glass-card hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
+            <Card className="animate-slide-up bg-card border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/5">
               <CardHeader className="pb-6">
                 <CardTitle className="text-2xl font-bold text-card-foreground flex items-center">
                   <Send className="w-6 h-6 mr-3 text-primary" />
@@ -145,7 +144,7 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="animate-scale-in space-y-8" style={{ animationDelay: '0.3s' }}>
               <div className="space-y-6">
-                <div className="flex items-center space-x-6 p-6 rounded-xl glass-card hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
+                <div className="flex items-center space-x-6 p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
                   <div className="bg-primary/10 p-4 rounded-full">
                     <Mail className="w-7 h-7 text-primary" />
                   </div>
@@ -155,7 +154,7 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-6 p-6 rounded-xl glass-card hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
+                <div className="flex items-center space-x-6 p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
                   <div className="bg-primary/10 p-4 rounded-full">
                     <Phone className="w-7 h-7 text-primary" />
                   </div>
@@ -165,7 +164,7 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-6 p-6 rounded-xl glass-card hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
+                <div className="flex items-center space-x-6 p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5">
                   <div className="bg-primary/10 p-4 rounded-full">
                     <MapPin className="w-7 h-7 text-primary" />
                   </div>

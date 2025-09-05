@@ -20,39 +20,45 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Modern overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      
+      {/* Professional overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10"></div>
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-primary/8 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
       
       {/* Content */}
       <div className="relative z-10 text-center px-6">
-        <div className="max-w-5xl mx-auto glass-effect rounded-3xl p-12 shadow-2xl border border-primary/20">
+        <div className="max-w-4xl mx-auto">
           <div className="animate-fade-in">
-            <div className="mb-6">
-              <span className="inline-block px-6 py-3 bg-primary/10 backdrop-blur-sm border border-primary/30 rounded-full text-primary text-sm font-semibold">
+            <div className="mb-4">
+              <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm font-medium">
                 Welcome to my portfolio
               </span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-primary mb-8 leading-none tracking-tight hero-text-glow">
+            <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-none tracking-tight">
               Haris Khan
             </h1>
           </div>
           
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-3xl md:text-4xl text-foreground mb-8 font-light">
+            <h2 className="text-3xl md:text-4xl text-white mb-8 font-light">
               AI Engineer & <span className="font-semibold text-accent">Machine Learning</span> Specialist
             </h2>
           </div>
           
           <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/85 mb-12 leading-relaxed max-w-3xl mx-auto">
               Building next-generation intelligent systems with cutting-edge Machine Learning and AI technologies
             </p>
           </div>
@@ -63,7 +69,7 @@ const Hero = () => {
               onClick={openGitHub}
               variant="outline" 
               size="lg" 
-              className="bg-primary/5 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 hover:scale-110 w-full sm:w-auto backdrop-blur-md shadow-lg hover:shadow-xl"
+              className="bg-white/5 border-white/20 text-white hover:bg-white hover:text-primary transition-all duration-500 hover:scale-110 w-full sm:w-auto backdrop-blur-md shadow-lg hover:shadow-xl"
             >
               <Github className="w-5 h-5 mr-2" />
               GitHub
@@ -72,7 +78,7 @@ const Hero = () => {
               onClick={openLinkedIn}
               variant="outline" 
               size="lg" 
-              className="bg-primary/5 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 hover:scale-110 w-full sm:w-auto backdrop-blur-md shadow-lg hover:shadow-xl"
+              className="bg-white/5 border-white/20 text-white hover:bg-accent hover:text-white hover:border-accent transition-all duration-500 hover:scale-110 w-full sm:w-auto backdrop-blur-md shadow-lg hover:shadow-xl"
             >
               <Linkedin className="w-5 h-5 mr-2" />
               LinkedIn
@@ -80,7 +86,7 @@ const Hero = () => {
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground border-0 transition-all duration-500 hover:scale-110 w-full sm:w-auto shadow-lg hover:shadow-xl"
+              className="bg-accent hover:bg-accent/90 text-white border-0 transition-all duration-500 hover:scale-110 w-full sm:w-auto shadow-lg hover:shadow-xl"
             >
               <Mail className="w-5 h-5 mr-2" />
               Contact
@@ -93,11 +99,11 @@ const Hero = () => {
               variant="ghost" 
               size="lg"
               onClick={scrollToProjects}
-              className="text-primary hover:bg-primary/10 animate-pulse-glow rounded-full p-4 transition-all duration-300"
+              className="text-white hover:bg-white/10 animate-pulse-glow rounded-full p-4 transition-all duration-300"
             >
               <ArrowDown className="w-6 h-6" />
             </Button>
-            <p className="text-muted-foreground text-sm mt-2">Scroll to explore</p>
+            <p className="text-white/70 text-sm mt-2">Scroll to explore</p>
           </div>
         </div>
       </div>
