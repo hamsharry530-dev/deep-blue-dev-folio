@@ -42,65 +42,70 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <div className="animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Featured Projects
+            <div className="mb-4">
+              <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full border border-primary/20">
+                Featured Work
+              </span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Projects Portfolio
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Showcasing innovative AI solutions that solve real-world problems
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Innovative AI solutions that solve real-world problems and push the boundaries of what's possible
             </p>
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/20 animate-slide-up"
+              className="group hover:shadow-2xl hover:shadow-primary/5 transition-all duration-700 hover:-translate-y-3 bg-card border-border/50 hover:border-primary/30 animate-slide-up overflow-hidden"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="relative overflow-hidden rounded-t-lg">
+              <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-all duration-500 group-hover:scale-110"
+                  className="w-full h-52 object-cover transition-all duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6">
                   <div className="text-white text-center">
-                    <p className="font-semibold">View Project</p>
+                    <p className="font-semibold text-lg">View Project Details</p>
                   </div>
                 </div>
               </div>
               
-              <CardHeader>
-                <CardTitle className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-300">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors duration-500">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground">
+                <CardDescription className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </CardDescription>
               </CardHeader>
               
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20 hover:bg-primary/20 transition-colors duration-200"
+                      className="px-3 py-1.5 bg-primary/5 text-primary text-sm font-medium rounded-full border border-primary/15 hover:bg-primary/10 hover:border-primary/25 transition-all duration-300"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 
-                <div className="flex space-x-3">
+                <div className="flex space-x-3 pt-2">
                   <Button 
                     variant="outline" 
                     size="sm" 
-                    className="flex-1 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    className="flex-1 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-500 shadow-sm hover:shadow-md"
                     onClick={() => handleGitHub(project.github)}
                   >
                     <Github className="w-4 h-4 mr-2" />
@@ -109,7 +114,7 @@ const Projects = () => {
                   <Button 
                     variant="default" 
                     size="sm" 
-                    className="flex-1 bg-primary hover:bg-primary-dark transition-all duration-300"
+                    className="flex-1 bg-primary hover:bg-primary-dark transition-all duration-500 shadow-sm hover:shadow-md"
                     onClick={() => handleDemo(project.demo)}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
