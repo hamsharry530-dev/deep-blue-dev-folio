@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   const openLinkedIn = () => {
-    window.open('www.linkedin.com/in/hariskhan164', '_blank');
+    window.open('https://linkedin.com/in/hariskhan164', '_blank');
   };
 
   const scrollToContact = () => {
