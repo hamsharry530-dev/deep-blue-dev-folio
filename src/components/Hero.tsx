@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   const openGitHub = () => {
-    window.open('https://github.com/Harisk-han', '_blank');
+    window.open('https://github.com', '_blank');
   };
 
   const openLinkedIn = () => {

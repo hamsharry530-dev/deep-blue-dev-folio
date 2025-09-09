@@ -15,8 +15,8 @@ const projects = [
     demo: "#"
   },
   {
-    title: "Natural Language processing",
-    description: "Real-time NLP projects. Built with transformers.",
+    title: "NLP Sentiment Analyzer",
+    description: "Real-time sentiment analysis API processing 10K+ messages daily. Built with transformers and deployed on AWS.",
     image: projectNLP,
     technologies: ["Python", "Transformers", "FastAPI", "AWS"],
     github: "#",
