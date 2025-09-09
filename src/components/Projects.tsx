@@ -7,15 +7,15 @@ import projectCV from "@/assets/project-cv.jpg";
 
 const projects = [
   {
-    title: "Neural Network Optimizer",
+    title: "Gen AI ",
     description: "Advanced deep learning model optimization using PyTorch and custom algorithms. Achieved 40% improvement in training efficiency.",
     image: projectML,
-    technologies: ["Python", "PyTorch", "CUDA", "Docker"],
+    technologies: ["Python", "RAG", "MODEL", "FINETUNE"],
     github: "#",
     demo: "#"
   },
   {
-    title: "NLP Sentiment Analyzer",
+    title: "Natural Language Processing",
     description: "Real-time sentiment analysis API processing 10K+ messages daily. Built with transformers and deployed on AWS.",
     image: projectNLP,
     technologies: ["Python", "Transformers", "FastAPI", "AWS"],
@@ -34,7 +34,7 @@ const projects = [
 
 const Projects = () => {
   const handleGitHub = (url: string) => {
-    window.open(url, '_blank');
+    window.open(url, 'https://github.com/Harisk-han/Titani_survivel');
   };
 
   const handleDemo = (url: string) => {
