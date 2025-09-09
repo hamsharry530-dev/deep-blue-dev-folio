@@ -12,7 +12,8 @@ const Hero = () => {
   };
 
   const openLinkedIn = () => {
-    window.open('https://linkedin.com', '_blank');
+    window.open('https://www.linkedin.com/hari
+ skhan164', '_blank');
   };
 
   const scrollToContact = () => {
