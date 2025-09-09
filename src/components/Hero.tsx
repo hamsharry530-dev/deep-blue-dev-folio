@@ -43,7 +43,7 @@ const Hero = () => {
           <div className="animate-fade-in">
             <div className="mb-4">
               <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm font-medium">
-                Welcome to my portfolio
+                Still in Process
               </span>
             </div>
             <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-none tracking-tight">
