@@ -11,7 +11,7 @@ const projects = [
     description: "Advanced deep learning model optimization using PyTorch and custom algorithms. Achieved 40% improvement in training efficiency.",
     image: projectML,
     technologies: ["Python", "RAG", "MODEL", "FINETUNE"],
-    github: "#",
+    github: "https://github.com/Harisk-han/Titani_survivel",
     demo: "#"
   },
   {
