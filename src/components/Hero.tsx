@@ -53,7 +53,7 @@ const Hero = () => {
           
           <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <h2 className="text-3xl md:text-4xl text-white mb-8 font-light">
-              AI Engineer & <span className="font-semibold text-accent">Machine Learning</span> Specialist
+              AI Engineer and <span className="font-semibold text-accent">Generative AI</span> Specialist
             </h2>
           </div>
           
