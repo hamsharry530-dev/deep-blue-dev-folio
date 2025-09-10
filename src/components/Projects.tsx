@@ -34,7 +34,7 @@ const projects = [
 
 const Projects = () => {
   const handleGitHub = (url: string) => {
-    window.open(url, 'https://github.com/Harisk-han/Titani_survivel');
+    window.open(url, '_blank');
   };
 
   const handleDemo = (url: string) => {
