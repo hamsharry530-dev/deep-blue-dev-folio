@@ -19,7 +19,7 @@ const projects = [
     description: "Real-time sentiment analysis API processing 10K+ messages daily. Built with transformers and deployed on AWS.",
     image: projectNLP,
     technologies: ["Python", "Transformers", "FastAPI", "AWS"],
-    github: "#",
+    github: "https://github.com/Harisk-han/-Mini-Project-ML-as-a-Service",
     demo: "#"
   },
   {
