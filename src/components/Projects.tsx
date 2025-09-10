@@ -5,14 +5,17 @@ import projectML from "@/assets/project-ml.jpg";
 import projectNLP from "@/assets/project-nlp.jpg";
 import projectCV from "@/assets/project-cv.jpg";
 
+// ===== ADD YOUR PROJECTS HERE =====
+// Just copy the template below and add your project details
 const projects = [
   {
-    title: "Gen AI ",
+    title: "Gen AI",
     description: "Advanced deep learning model optimization using PyTorch and custom algorithms. Achieved 40% improvement in training efficiency.",
     image: projectML,
     technologies: ["Python", "RAG", "MODEL", "FINETUNE"],
     github: "https://github.com/Harisk-han/Titani_survivel",
-    demo: "#"
+    demo: "https://your-demo-link.com", // Replace with your demo link
+    liveUrl: "https://your-project.com" // Optional: Add live project URL
   },
   {
     title: "Natural Language Processing",
@@ -20,16 +23,32 @@ const projects = [
     image: projectNLP,
     technologies: ["Python", "Transformers", "FastAPI", "AWS"],
     github: "https://github.com/Harisk-han/-Mini-Project-ML-as-a-Service",
-    demo: "#"
+    demo: "https://your-nlp-demo.com", // Replace with your demo link
+    liveUrl: "https://your-nlp-project.com" // Optional: Add live project URL
   },
   {
     title: "Computer Vision Pipeline",
     description: "End-to-end object detection system with 95% accuracy for manufacturing quality control.",
     image: projectCV,
     technologies: ["OpenCV", "TensorFlow", "React", "MongoDB"],
-    github: "#",
-    demo: "#"
+    github: "https://github.com/yourusername/cv-project", // Replace with your GitHub link
+    demo: "https://your-cv-demo.com", // Replace with your demo link
+    liveUrl: "https://your-cv-project.com" // Optional: Add live project URL
   }
+  
+  // ===== TO ADD MORE PROJECTS =====
+  // Copy this template and paste it above this comment:
+  /*
+  ,{
+    title: "Your Project Name",
+    description: "Your project description here. Keep it concise and impactful.",
+    image: projectML, // Use projectML, projectNLP, or projectCV for now
+    technologies: ["Tech1", "Tech2", "Tech3", "Tech4"],
+    github: "https://github.com/yourusername/your-repo",
+    demo: "https://your-demo-link.com",
+    liveUrl: "https://your-live-project.com" // Optional
+  }
+  */
 ];
 
 const Projects = () => {
