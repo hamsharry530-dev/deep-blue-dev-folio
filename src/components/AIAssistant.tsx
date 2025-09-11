@@ -76,12 +76,14 @@ const AIAssistant = () => {
               
               <div className="relative rounded-xl overflow-hidden border-2 border-primary/20 shadow-lg">
                 <iframe 
-                  src="https://huggingface.co/spaces/hamsharryy/bus"  
+                  src="https://hamsharryy-bus.hf.space"  
                   width="100%" 
                   height="600px" 
                   style={{ border: 'none' }}
                   className="w-full"
                   title="Personal AI Assistant"
+                  allow="microphone; camera"
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation"
                 />
               </div>
               
