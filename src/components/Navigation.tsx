@@ -51,6 +51,13 @@ const Navigation = () => {
             </Button>
             <Button
               variant="ghost"
+              onClick={() => scrollToSection('ai-assistant')}
+              className="text-foreground hover:text-primary"
+            >
+              AI Assistant
+            </Button>
+            <Button
+              variant="ghost"
               onClick={() => scrollToSection('contact')}
               className="text-foreground hover:text-primary"
             >

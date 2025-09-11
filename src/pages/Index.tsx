@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
+import AIAssistant from "@/components/AIAssistant";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -16,6 +17,9 @@ const Index = () => {
       </section>
       <section id="about">
         <About />
+      </section>
+      <section id="ai-assistant">
+        <AIAssistant />
       </section>
       <section id="contact">
         <Contact />
