@@ -122,7 +122,7 @@ const AIAssistant = () => {
 
         <div className="max-w-4xl mx-auto">
           <Card className="h-[600px] flex flex-col shadow-2xl border-border/50">
-            <CardHeader className="border-b border-border/50 bg-card/50">
+            <CardHeader className="flex-shrink-0 border-b border-border/50 bg-card/50">
               <CardTitle className="flex items-center gap-3 text-xl">
                 <Bot className="w-6 h-6 text-primary" />
                 AI Assistant
@@ -133,63 +133,65 @@ const AIAssistant = () => {
               </CardTitle>
             </CardHeader>
             
-            <CardContent className="flex-1 flex flex-col p-0">
-              <ScrollArea className="flex-1 p-6" ref={scrollAreaRef}>
-                <div className="space-y-4">
-                  {messages.map((message) => (
-                    <div
-                      key={message.id}
-                      className={`flex items-start gap-3 ${
-                        message.sender === 'user' ? 'flex-row-reverse' : 'flex-row'
-                      }`}
-                    >
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                        message.sender === 'user' 
-                          ? 'bg-primary text-primary-foreground' 
-                          : 'bg-secondary text-secondary-foreground'
-                      }`}>
-                        {message.sender === 'user' ? (
-                          <User className="w-4 h-4" />
-                        ) : (
-                          <Bot className="w-4 h-4" />
-                        )}
-                      </div>
-                      
-                      <div className={`flex-1 max-w-[80%] ${
-                        message.sender === 'user' ? 'text-right' : 'text-left'
-                      }`}>
-                        <div className={`inline-block p-3 rounded-2xl ${
-                          message.sender === 'user'
-                            ? 'bg-primary text-primary-foreground rounded-br-md'
-                            : 'bg-secondary text-secondary-foreground rounded-bl-md'
+            <CardContent className="flex-1 flex flex-col p-0 min-h-0">
+              <ScrollArea className="flex-1 min-h-0" ref={scrollAreaRef}>
+                <div className="p-6">
+                  <div className="space-y-4">
+                    {messages.map((message) => (
+                      <div
+                        key={message.id}
+                        className={`flex items-start gap-3 ${
+                          message.sender === 'user' ? 'flex-row-reverse' : 'flex-row'
+                        }`}
+                      >
+                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                          message.sender === 'user' 
+                            ? 'bg-primary text-primary-foreground' 
+                            : 'bg-secondary text-secondary-foreground'
                         }`}>
-                          <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                            {message.content}
+                          {message.sender === 'user' ? (
+                            <User className="w-4 h-4" />
+                          ) : (
+                            <Bot className="w-4 h-4" />
+                          )}
+                        </div>
+                        
+                        <div className={`flex-1 max-w-[80%] ${
+                          message.sender === 'user' ? 'text-right' : 'text-left'
+                        }`}>
+                          <div className={`inline-block p-3 rounded-2xl ${
+                            message.sender === 'user'
+                              ? 'bg-primary text-primary-foreground rounded-br-md'
+                              : 'bg-secondary text-secondary-foreground rounded-bl-md'
+                          }`}>
+                            <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                              {message.content}
+                            </p>
+                          </div>
+                          <p className="text-xs text-muted-foreground mt-1 px-3">
+                            {message.timestamp.toLocaleTimeString([], { 
+                              hour: '2-digit', 
+                              minute: '2-digit' 
+                            })}
                           </p>
                         </div>
-                        <p className="text-xs text-muted-foreground mt-1 px-3">
-                          {message.timestamp.toLocaleTimeString([], { 
-                            hour: '2-digit', 
-                            minute: '2-digit' 
-                          })}
-                        </p>
                       </div>
-                    </div>
-                  ))}
-                  
-                  {isLoading && (
-                    <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center">
-                        <Bot className="w-4 h-4" />
-                      </div>
-                      <div className="bg-secondary text-secondary-foreground p-3 rounded-2xl rounded-bl-md">
-                        <div className="flex items-center gap-2">
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                          <span className="text-sm">Thinking...</span>
+                    ))}
+                    
+                    {isLoading && (
+                      <div className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center">
+                          <Bot className="w-4 h-4" />
+                        </div>
+                        <div className="bg-secondary text-secondary-foreground p-3 rounded-2xl rounded-bl-md">
+                          <div className="flex items-center gap-2">
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span className="text-sm">Thinking...</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               </ScrollArea>
               
