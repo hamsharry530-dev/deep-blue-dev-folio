@@ -55,13 +55,13 @@ const AIAssistant = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE_URL}/chat`, {
+      const response = await fetch(`${API_BASE_URL}/ask`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: inputValue
+          question: inputValue
         })
       });
 
@@ -70,10 +70,11 @@ const AIAssistant = () => {
       }
 
       const data = await response.json();
+      console.log(data.answer); // Balanced, appropriate-length response
       
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.response || data.message || 'Sorry, I could not process your request.',
+        content: data.answer || 'Sorry, I could not process your request.',
         sender: 'bot',
         timestamp: new Date()
       };
