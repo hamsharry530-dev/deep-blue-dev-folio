@@ -55,7 +55,7 @@ const AIAssistant = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${API_BASE_URL}/ask`, {
+      const response = await fetch(`${API_BASE_URL}/api/ask`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
