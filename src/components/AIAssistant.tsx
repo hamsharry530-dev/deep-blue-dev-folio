@@ -25,7 +25,7 @@ const AIAssistant = () => {
   const [isLoading, setIsLoading] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
-  const API_BASE_URL = 'https://242d0175-35f4-4bed-b6ab-6b1ee826cf99-00-3rxzwnf2ly6as.spock.replit.dev';
+  const API_BASE_URL = 'https://huggingface.co/spaces/hamsharryy/bus';
 
   useEffect(() => {
     scrollToBottom();
