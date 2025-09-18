@@ -19,14 +19,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500">
-      {/* Fun Background Elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl animate-bounce" style={{ animationDuration: '3s' }}></div>
-        <div className="absolute bottom-32 right-20 w-48 h-48 bg-pink-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 left-10 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-float"></div>
-        <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-orange-400/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-32 right-1/3 w-28 h-28 bg-red-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '2s', animationDuration: '4s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
       
       {/* Content */}
