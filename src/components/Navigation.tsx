@@ -48,12 +48,8 @@ const Navigation = () => {
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/95 backdrop-blur-md border-b border-border' 
-          : 'bg-transparent'
-      }`}
-      style={isScrolled ? { boxShadow: 'var(--shadow-subtle)' } : {}}
+      className="fixed top-0 w-full z-50 bg-background border-b border-border transition-all duration-300"
+      style={{ boxShadow: 'var(--shadow-subtle)' }}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
