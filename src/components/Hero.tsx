@@ -20,90 +20,89 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       
-      {/* Professional overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10"></div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
-      </div>
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="animate-fade-in">
-            <div className="mb-4">
-              <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white/90 text-sm font-medium">
-                Still in Process
-              </span>
-            </div>
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-none tracking-tight">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-8 pt-20">
+        <div className="flex flex-col items-start">
+          {/* Status Badge */}
+          <div className="animate-fade-in mb-8">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white/80 text-xs font-medium tracking-wide uppercase">
+              <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+              Available for opportunities
+            </span>
+          </div>
+          
+          {/* Main Heading */}
+          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white tracking-tight leading-[1.1] mb-4">
               Haris Khan
             </h1>
           </div>
           
-          <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-3xl md:text-4xl text-white mb-8 font-light">
-              AI Engineer and <span className="font-semibold text-accent">Generative AI</span> Specialist
+          {/* Role Title */}
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl text-white/90 font-light tracking-tight mb-6">
+              AI Engineer <span className="text-white/50 mx-2">·</span> 
+              <span className="text-accent font-normal">Generative AI Specialist</span>
             </h2>
           </div>
           
-          <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <p className="text-xl md:text-2xl text-white/85 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Building next-generation intelligent systems with cutting-edge Machine Learning and AI technologies
+          {/* Description */}
+          <div className="animate-fade-in max-w-2xl" style={{ animationDelay: '0.3s' }}>
+            <p className="text-base sm:text-lg text-white/70 leading-relaxed font-light mb-10">
+              I design and build intelligent systems that solve real business problems. 
+              Specializing in LLMs, computer vision, and production-grade ML infrastructure.
             </p>
           </div>
           
-          {/* Social Links */}
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12 animate-scale-in" style={{ animationDelay: '0.6s' }}>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-3 mb-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <Button 
+              onClick={scrollToContact}
+              size="lg" 
+              className="bg-white text-primary hover:bg-white/90 font-medium px-6 h-11 transition-all duration-300"
+            >
+              <Mail className="w-4 h-4 mr-2" />
+              Get in Touch
+            </Button>
             <Button 
               onClick={openGitHub}
               variant="outline" 
               size="lg" 
-              className="bg-white/5 border-white/20 text-white hover:bg-white hover:text-primary transition-all duration-500 hover:scale-110 w-full sm:w-auto backdrop-blur-md shadow-lg hover:shadow-xl"
+              className="bg-transparent border-white/20 text-white hover:bg-white/10 hover:border-white/30 font-medium px-6 h-11 transition-all duration-300"
             >
-              <Github className="w-5 h-5 mr-2" />
+              <Github className="w-4 h-4 mr-2" />
               GitHub
             </Button>
             <Button 
               onClick={openLinkedIn}
               variant="outline" 
               size="lg" 
-              className="bg-white/5 border-white/20 text-white hover:bg-accent hover:text-white hover:border-accent transition-all duration-500 hover:scale-110 w-full sm:w-auto backdrop-blur-md shadow-lg hover:shadow-xl"
+              className="bg-transparent border-white/20 text-white hover:bg-white/10 hover:border-white/30 font-medium px-6 h-11 transition-all duration-300"
             >
-              <Linkedin className="w-5 h-5 mr-2" />
+              <Linkedin className="w-4 h-4 mr-2" />
               LinkedIn
-            </Button>
-            <Button 
-              onClick={scrollToContact}
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-white border-0 transition-all duration-500 hover:scale-110 w-full sm:w-auto shadow-lg hover:shadow-xl"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Contact
             </Button>
           </div>
           
           {/* Scroll Indicator */}
-          <div className="animate-scale-in" style={{ animationDelay: '0.8s' }}>
-            <Button 
-              variant="ghost" 
-              size="lg"
+          <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <button 
               onClick={scrollToProjects}
-              className="text-white hover:bg-white/10 animate-pulse-glow rounded-full p-4 transition-all duration-300"
+              className="flex items-center gap-2 text-white/50 hover:text-white/80 transition-colors duration-300 group"
             >
-              <ArrowDown className="w-6 h-6" />
-            </Button>
-            <p className="text-white/70 text-sm mt-2">Scroll to explore</p>
+              <span className="text-sm font-medium tracking-wide">View my work</span>
+              <ArrowDown className="w-4 h-4 animate-bounce" />
+            </button>
           </div>
         </div>
       </div>
