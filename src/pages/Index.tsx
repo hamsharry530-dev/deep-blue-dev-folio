@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import AIAssistant from "@/components/AIAssistant";
 
 const Index = () => {
   return (
@@ -17,9 +16,6 @@ const Index = () => {
       </section>
       <section id="about">
         <About />
-      </section>
-      <section id="ai-assistant">
-        <AIAssistant />
       </section>
       <section id="contact">
         <Contact />
